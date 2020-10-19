@@ -1,0 +1,8 @@
+D:\projects\C#\timus test\Solver\bin\Debug\netstandard2.0\Solver.deps.json
+D:\projects\C#\timus test\Solver\bin\Debug\netstandard2.0\Solver.dll
+D:\projects\C#\timus test\Solver\bin\Debug\netstandard2.0\Solver.pdb
+D:\projects\C#\timus test\Solver\obj\Debug\netstandard2.0\Solver.csprojAssemblyReference.cache
+D:\projects\C#\timus test\Solver\obj\Debug\netstandard2.0\Solver.AssemblyInfoInputs.cache
+D:\projects\C#\timus test\Solver\obj\Debug\netstandard2.0\Solver.AssemblyInfo.cs
+D:\projects\C#\timus test\Solver\obj\Debug\netstandard2.0\Solver.dll
+D:\projects\C#\timus test\Solver\obj\Debug\netstandard2.0\Solver.pdb

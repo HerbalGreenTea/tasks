@@ -1,0 +1,9 @@
+D:\projects\C#\timus test\timus test\bin\Debug\timus test.exe.config
+D:\projects\C#\timus test\timus test\bin\Debug\timus test.exe
+D:\projects\C#\timus test\timus test\bin\Debug\timus test.pdb
+D:\projects\C#\timus test\timus test\obj\Debug\timus test.csprojAssemblyReference.cache
+D:\projects\C#\timus test\timus test\obj\Debug\timus test.exe
+D:\projects\C#\timus test\timus test\obj\Debug\timus test.pdb
+D:\projects\C#\timus test\timus test\bin\Debug\Solver.dll
+D:\projects\C#\timus test\timus test\bin\Debug\Solver.pdb
+D:\projects\C#\timus test\timus test\obj\Debug\timus test.csproj.CopyComplete

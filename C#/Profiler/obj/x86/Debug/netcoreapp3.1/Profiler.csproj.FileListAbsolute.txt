@@ -1,0 +1,17 @@
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\cat.jpg
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.exe
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.deps.json
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.runtimeconfig.json
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.runtimeconfig.dev.json
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.dll
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\Profiler.pdb
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\MyPhotoshop.exe
+D:\projects\C#\Profiler\bin\x86\Debug\netcoreapp3.1\MyPhotoshop.pdb
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.csprojAssemblyReference.cache
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.AssemblyInfoInputs.cache
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.AssemblyInfo.cs
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.csproj.CoreCompileInputs.cache
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.csproj.CopyComplete
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.dll
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.pdb
+D:\projects\C#\Profiler\obj\x86\Debug\netcoreapp3.1\Profiler.genruntimeconfig.cache

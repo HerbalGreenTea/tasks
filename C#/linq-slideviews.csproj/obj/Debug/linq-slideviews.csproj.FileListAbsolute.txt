@@ -1,0 +1,15 @@
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\NUnit3.TestAdapter.dll
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\NUnit3.TestAdapter.pdb
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\nunit.engine.dll
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\nunit.engine.api.dll
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\slides.txt
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\visits.txt
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\linq-slideviews.exe
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\linq-slideviews.pdb
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\nunit.framework.dll
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\nunit.framework.pdb
+D:\projects\C#\linq-slideviews.csproj\bin\Debug\nunit.framework.xml
+D:\projects\C#\linq-slideviews.csproj\obj\Debug\linq-slideviews.csprojAssemblyReference.cache
+D:\projects\C#\linq-slideviews.csproj\obj\Debug\linq-slideviews.csproj.CopyComplete
+D:\projects\C#\linq-slideviews.csproj\obj\Debug\linq-slideviews.exe
+D:\projects\C#\linq-slideviews.csproj\obj\Debug\linq-slideviews.pdb

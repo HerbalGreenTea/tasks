@@ -1,0 +1,42 @@
+/* if (value % 9 == 0)
+                    {
+                        result.Insert(0, 9);
+                        value /= 9;
+                    }
+                    else if (value % 8 == 0)
+                    {
+                        result.Insert(0, 8);
+                        value /= 8;
+                    }
+                    else if (value % 7 == 0)
+                    {
+                        result.Insert(0, 7);
+                        value /= 7;
+                    }
+                    else if (value % 6 == 0)
+                    {
+                        result.Insert(0, 6);
+                        value /= 6;
+                    }
+                    else if (value % 5 == 0)
+                    {
+                        result.Insert(0, 5);
+                        value /= 5;
+                    }
+                    else if (value % 4 == 0)
+                    {
+                        value /= 4;
+                    }
+                    else if (value % 3 == 0)
+                    {
+                        value /= 3;
+                    }
+                    else if (value % 2 == 0)
+                    {
+                        value /= 2;
+                    }
+                    else
+                    {
+                        Console.WriteLine(-1);
+                        return;
+                    } */

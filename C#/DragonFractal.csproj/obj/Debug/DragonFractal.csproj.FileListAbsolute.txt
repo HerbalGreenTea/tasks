@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\DragonFractal.csproj\bin\Debug\DragonFractal.exe.config
+C:\Users\user\source\repos\DragonFractal.csproj\bin\Debug\DragonFractal.exe
+C:\Users\user\source\repos\DragonFractal.csproj\bin\Debug\DragonFractal.pdb
+C:\Users\user\source\repos\DragonFractal.csproj\obj\Debug\DragonFractal.csprojAssemblyReference.cache
+C:\Users\user\source\repos\DragonFractal.csproj\obj\Debug\DragonFractal.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DragonFractal.csproj\obj\Debug\DragonFractal.exe
+C:\Users\user\source\repos\DragonFractal.csproj\obj\Debug\DragonFractal.pdb

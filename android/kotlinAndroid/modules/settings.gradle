@@ -1,0 +1,4 @@
+include ':repos'
+include ':domain'
+include ':app'
+rootProject.name = "modules"

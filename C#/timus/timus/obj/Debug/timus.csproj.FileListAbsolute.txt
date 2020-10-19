@@ -1,0 +1,6 @@
+D:\projects\C#\timus\timus\bin\Debug\timus.exe.config
+D:\projects\C#\timus\timus\bin\Debug\timus.exe
+D:\projects\C#\timus\timus\bin\Debug\timus.pdb
+D:\projects\C#\timus\timus\obj\Debug\timus.csprojAssemblyReference.cache
+D:\projects\C#\timus\timus\obj\Debug\timus.exe
+D:\projects\C#\timus\timus\obj\Debug\timus.pdb

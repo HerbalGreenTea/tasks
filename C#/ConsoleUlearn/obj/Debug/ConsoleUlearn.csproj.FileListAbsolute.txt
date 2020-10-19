@@ -1,0 +1,6 @@
+D:\projects\C#\ConsoleUlearn\bin\Debug\ConsoleUlearn.exe.config
+D:\projects\C#\ConsoleUlearn\bin\Debug\ConsoleUlearn.exe
+D:\projects\C#\ConsoleUlearn\bin\Debug\ConsoleUlearn.pdb
+D:\projects\C#\ConsoleUlearn\obj\Debug\ConsoleUlearn.csprojAssemblyReference.cache
+D:\projects\C#\ConsoleUlearn\obj\Debug\ConsoleUlearn.exe
+D:\projects\C#\ConsoleUlearn\obj\Debug\ConsoleUlearn.pdb

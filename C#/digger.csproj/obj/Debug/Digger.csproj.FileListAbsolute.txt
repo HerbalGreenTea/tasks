@@ -1,0 +1,15 @@
+D:\projects\C#\digger.csproj\bin\Debug\Images\Digger.png
+D:\projects\C#\digger.csproj\bin\Debug\Images\Gold.png
+D:\projects\C#\digger.csproj\bin\Debug\Images\Monster.png
+D:\projects\C#\digger.csproj\bin\Debug\Images\Sack.png
+D:\projects\C#\digger.csproj\bin\Debug\Images\Terrain.png
+D:\projects\C#\digger.csproj\bin\Debug\11-digger.exe.config
+D:\projects\C#\digger.csproj\bin\Debug\11-digger.exe
+D:\projects\C#\digger.csproj\bin\Debug\11-digger.pdb
+D:\projects\C#\digger.csproj\bin\Debug\nunit.framework.dll
+D:\projects\C#\digger.csproj\obj\Debug\Digger.csprojAssemblyReference.cache
+D:\projects\C#\digger.csproj\obj\Debug\Digger.Properties.Resources.resources
+D:\projects\C#\digger.csproj\obj\Debug\Digger.csproj.GenerateResource.cache
+D:\projects\C#\digger.csproj\obj\Debug\Digger.csproj.CopyComplete
+D:\projects\C#\digger.csproj\obj\Debug\11-digger.exe
+D:\projects\C#\digger.csproj\obj\Debug\11-digger.pdb
