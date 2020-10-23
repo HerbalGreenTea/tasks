@@ -1,0 +1,7 @@
+#lang racket
+(define (max-value value)
+  (if (< value 10) value (max (remainder value 10) (max-value (quotient value 10)))))
+
+(max-value 100)
+(max-value 113)
+(max-value 313)

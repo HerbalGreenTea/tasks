@@ -1,0 +1,15 @@
+#lang racket
+(define (is-equal val1 val2)
+  (if (= val1 val2) 0 1))
+
+(define (eq-values number)
+  (define (iter value n sum)
+    (if (< n 10)
+        (= (+ sum (is-equal n value)) 0)
+        (iter value (quotient n 10) (+ sum (is-equal (remainder n 10) value)))))
+  (iter (remainder number 10) number 0))
+
+(eq-values 111)
+(eq-values 110)
+(eq-values 100)
+(eq-values 101)

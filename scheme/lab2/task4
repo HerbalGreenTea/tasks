@@ -1,0 +1,17 @@
+#lang racket
+(define (is-nigh-number v1 v2 n)
+  (if (< (abs (- v1 n)) (abs (- v2 n))) v1 v2))
+
+(define (fib value)
+  (define (iter v1 v2 k)
+    (if (= k 0) v2 (iter v2 (+ v1 v2) (- k 1))))
+  (iter 1 1 (- value 1)))
+
+(define (find-nigh-fib number)
+  (define (iter n)
+    (if (>= (fib n) number ) (is-nigh-number (fib n) (fib (- n 1)) number)
+        (iter (+ n 1))))
+  (iter 1))
+
+(find-nigh-fib 6)
+(find-nigh-fib 7)

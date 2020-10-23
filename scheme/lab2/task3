@@ -1,0 +1,21 @@
+#lang racket
+(define (is-num-factorial number)
+  (define (iter prod counter)
+    (if (> counter number)
+        prod
+        (iter (* counter prod)
+              (+ counter 1))))
+  (iter 1 1))
+
+(define (check number)
+  (define (iter n)
+    (if (>= (is-num-factorial n) number ) (= (is-num-factorial n) number)
+        (iter (+ n 1))))
+  (iter 1))
+
+(check 1)
+(check 2)
+(check 3)
+(check 4)
+(check 5)
+(check 6)
