@@ -1,0 +1,2 @@
+average
+  \x.\y.\a.if (< x y) (if (< y a) y (if (< a x) x a)) (if (< x a) x (if (< a y) y a))

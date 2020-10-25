@@ -1,0 +1,12 @@
+YY
+  \h.(\x.h (x x)) (\x.h (x x))
+LastDit
+  \x.- x (* (/ x 10) 10)
+Max
+  \x.\y.if (> x y) x y
+MaxDit
+  \f.\x.if (< x 10) x (if (> (- x (* (/ x 10) 10)) (f (/ x 10))) (- x (* (/ x 10) 10)) (f (/ x 10)))
+SumFact
+  \f.\x.if (= x 1) 1 (+ ((\h.(\i0.h (i0 i0)) (\i0.h (i0 i0))) (\i0.\i1.if (= i1 1) 1 (* i1 (i0 (- i1 1)))) x) (f (- x 1)))
+Fact
+  \f.\x.if (= x 1) 1 (* x (f (- x 1)))
