@@ -1,0 +1,4 @@
+YY
+  \h.(\x.h (x x)) (\x.h (x x))
+result
+  \f.\n.if (< n 3) 1 (+ (f (- n 1)) (f (- n 2)))
