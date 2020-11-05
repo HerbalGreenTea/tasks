@@ -18,7 +18,10 @@
 ; task 3
 
 (define (resultTask3 data)
-  (if (empty? (cdr data)) (car data) (task3 data)))
+  (cond
+    [(empty? (cdr data)) (car data)]
+    [(> (car data) (car (cdr data))) (car data)]
+    [else (task3 data)]))
 
 (define (task3 currentList)
   (define (iter prev data)
