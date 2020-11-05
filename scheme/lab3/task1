@@ -1,0 +1,21 @@
+#lang racket
+;task 1
+(define (isDiv num div) (if (= (remainder num div) 0) 1 0))
+
+(define (divSum num)
+  (define (iter n sum counter count)
+    (cond
+      [(= (remainder n 10) 0) #f]
+      [(= count counter) (= sum count)]
+      [else (iter
+             (quotient n 10)
+             (+ sum (isDiv num (remainder n 10)))
+             (+ counter 1)
+             count)]))
+  (iter num 0 0 (string-length(number->string num))))
+
+(divSum 1)
+(divSum 22)
+(divSum 49)
+(divSum 121)
+(divSum 120)

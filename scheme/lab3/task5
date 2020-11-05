@@ -1,0 +1,16 @@
+#lang racket
+;task 5
+(define (findNum index)
+  (define (iter str i)
+    (if (<= index (string-length str))
+        (string->number (string (string-ref str (- index 1))))
+        (iter (string-append str (number->string (+ i 1))) (+ i 1))))
+  (iter "1" 1))
+
+(findNum 1)
+(findNum 10)
+(findNum 100)
+(findNum 1000)
+
+
+

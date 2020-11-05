@@ -1,0 +1,11 @@
+#lang racket
+;task 3
+(define (result startNum count)
+  (define (iter el counter elems)
+    (cond
+      [(= counter count) elems]
+      [(= (remainder el 2) 0) (iter (/ el 2) (+ counter 1) (append elems (list(/ el 2))))]
+      [else (iter (+ (* 3 el) 1) (+ counter 1) (append elems (list(+ (* 3 el) 1))))]))
+  (iter startNum 1 (list startNum)))
+
+(result 2 11)

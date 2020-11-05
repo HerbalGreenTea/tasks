@@ -1,0 +1,63 @@
+#lang racket
+; task 1
+(define (resultTask1 num c)
+  (cons (quotient num (expt 10 c)) (remainder num (expt 10 c))))
+
+; (resultTask1 11111 1)
+
+
+; task 2
+
+(define (resultTask2 data)
+  (if (empty? data) #t
+      (and (even? (car data)) (resultTask2 (cdr data)))))
+
+; (resultTask2 '(1 1 1))
+
+
+; task 3
+
+(define (resultTask3 data)
+  (if (empty? (cdr data)) (car data) (task3 data)))
+
+(define (task3 currentList)
+  (define (iter prev data)
+    (if (and (<= prev (car data)) (>= (car data) (if (empty? (cdr data)) 0 (car (cdr data)))))
+        (car data)
+        (iter (car data) (cdr data))))
+  (iter (car currentList) (cdr currentList)))
+
+;(resultTask3 '(1 1 1))
+
+
+; task 4
+
+(define (resultTask4 data)
+  (define (iter currData resData count)
+    (cond
+      [(empty? currData) (if (= count 0) (iter (cdr data) resData 1) resData)]
+      [else (iter (cdr currData) (cons (car currData) resData) count)]))
+  (iter (reverse data) '() 0))
+
+
+; (resultTask4 '(1 1 1))
+
+
+; task 5
+
+(define (resultTask5 data n)
+  (define (iter curData p k)
+    (if (empty? curData)
+        (if (eq? k #t) p 0)
+        (if (> 10 (quotient (car curData) (expt 10 (- n 1))))
+            (iter (cdr curData) (* (car curData) p) #t)
+            (iter (cdr curData) p k))))
+  (iter data 1 #f))
+
+;(resultTask5 '(1 11 111) 1)
+
+
+
+
+
+

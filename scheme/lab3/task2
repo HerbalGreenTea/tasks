@@ -1,0 +1,13 @@
+#lang racket
+;task 2
+(define (isPower2 num) (= (bitwise-and num (- num 1)) 0))
+
+(define (findPower2 num)
+  (define (iter n sum)
+    (if (> n 1) (iter(/ n 2) (+ 1 sum)) sum))
+  (iter num 0))
+
+(define (result num)
+  (if (isPower2 num) (findPower2 num) #f))
+
+(result 1)

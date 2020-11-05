@@ -1,0 +1,36 @@
+#lang racket
+;task 4
+(define (isSimple num)
+  (define (iter n counter)
+    (cond
+      [(= counter (- n 1))]
+      [(= (remainder n counter) 0) #f]
+      [else (iter n (+ counter 1))]))
+  (iter num 2))
+
+(define (isTwoSimple num1 num2)
+  (and (isSimple num1) (isSimple num2)))
+
+(define (findDivisor num startPoint)
+  (define (iter n counter)
+    (if (= (remainder n counter) 0) counter (iter n (+ counter 1))))
+  (iter num startPoint))
+
+(define (result num)
+  (define (iter n counter divisor)
+    (cond
+      [(= (findDivisor n counter) counter) #f]
+      [(= counter n) #f]
+      [(isTwoSimple (findDivisor n divisor) divisor) #t]
+      [else (iter n (+ 1 counter) (findDivisor n (+ 1 counter)))]))
+  (iter num 2 2))
+
+
+;(result 13)
+;(result 22)
+;(result 121)
+;(result 5)
+;(result 49)
+;(result 6)
+; доделать для 1 и прочих тестовы
+(result 3)
