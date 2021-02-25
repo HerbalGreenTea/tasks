@@ -1,0 +1,89 @@
+#lang racket
+
+;; task1
+
+(define (calcDerivative polinom)
+  (define (iter index derivative)
+    (cond
+      [(= (length polinom) index) (reverse derivative)]
+      [(= index 0) (iter (+ 1 index) derivative)]
+      [(= index 1) (iter (+ 1 index) (append derivative (list (list-ref polinom index))))]
+      [else (iter (+ 1 index) (append derivative (list (* index (list-ref polinom index)))))]))
+  (iter 0 '()))
+
+(define (getDerivative polinom)
+  (calcDerivative (reverse polinom)))
+
+; (getDerivative '(1 1 1)) ; result fun
+
+;; task2
+
+(define (calcSumPolinoms polinom1 polinom2)
+  (foldl (λ (arg1 arg2 sumP) (append sumP (list (+ arg1 arg2)))) '() polinom1 polinom2))
+
+(define (getSumPolinoms p1 p2)
+  (cond
+    [(< (length p1) (length p2))
+     (calcSumPolinoms p2 (append p1 (build-list (- (length p2) (length p1)) (lambda (x) 0))))]
+    [(> (length p1) (length p2))
+     (calcSumPolinoms p1 (append p2 (build-list (- (length p1) (length p2)) (lambda (x) 0))))]
+    [else (calcSumPolinoms p1 p2)]))
+
+; (getSumPolinoms '(0 0 0) '(1 1 1)) ; result fun
+
+;; task3
+
+
+(define (multPolinom p1 p2)
+  (define (iter currEl resPol currP1)
+    (cond
+      [(empty? currP1) resPol]
+      [else (iter (car currP1) (append resPol (list (foldl (λ (arg res) (+ (* arg currEl) res)) 0 p2))) (cdr currP1))]))
+  (iter (car p1) '() (cdr p1)))
+
+; (multPolinom '(1 2 3) '(1 1 1)) ; result fun
+
+
+;; task4
+
+(define (sumNumNotation c num1 . numLst)
+  (define (iter currIndex currNum currList resultNum)
+    (cond
+      [(= currIndex 0) (+ resultNum currNum)]
+      [else (iter (- currIndex 1) (car currList) (cdr currList) (+ resultNum (* currNum (expt c currIndex))))]))
+  (iter (length numLst) num1 numLst 0))
+
+; (sumNumNotation 7 1) ; result fun
+
+
+;; task5
+
+(define (mthodHornera m x)
+  (foldl (λ (k r) (+ k (* r x))) 0 m))
+
+(define (p cList)
+  (define powerList (cdr (build-list (length cList) (λ (x) (- (length cList) x)))))
+  (define listCoef (take cList (- (length cList) 1)))
+  (if (empty? listCoef) '(0) (map (λ (x y) (* x y)) powerList listCoef)))
+
+(define (methodNewtona x polynom epsilon)
+  (if (< (abs (mthodHornera polynom x)) epsilon)
+      x
+      (methodNewtona (- x (/ (mthodHornera polynom x) (mthodHornera (p polynom) x))) polynom epsilon)))
+
+; (methodNewtona 1 '(1 -1) 0.111) ; result fun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

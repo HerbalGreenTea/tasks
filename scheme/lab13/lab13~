@@ -1,0 +1,32 @@
+#lang racket
+
+;; task1
+
+(define (calcDerivative polinom)
+  (define (iter index derivative)
+    (cond
+      [(= (length polinom) index) (reverse derivative)]
+      [(= index 0) (iter (+ 1 index) derivative)]
+      [(= index 1) (iter (+ 1 index) (append derivative (list (list-ref polinom index))))]
+      [else (iter (+ 1 index) (append derivative (list (* index (list-ref polinom index)))))]))
+  (iter 0 '()))
+
+(define (getDerivative polinom)
+  (calcDerivative (reverse polinom)))
+
+; (getDerivative '(1 1 1)) ; result fun
+
+;; task2
+
+(define (calcSumPolinoms polinom1 polinom2)
+  (foldl (λ (arg1 arg2 sumP) (append sumP (list (+ arg1 arg2)))) '() polinom1 polinom2))
+
+(define (getSumPolinoms p1 p2)
+  (cond
+    [(< (length p1) (length p2))
+     (calcSumPolinoms p2 (append p1 (build-list (- (length p2) (length p1)) (lambda (x) 0))))]
+    [(> (length p1) (length p2))
+     (calcSumPolinoms p1 (append p2 (build-list (- (length p1) (length p2)) (lambda (x) 0))))]
+    [else (calcSumPolinoms p1 p2)]))
+
+; (getSumPolinoms '(0 0 0) '(1 1 1)) ; result fun
