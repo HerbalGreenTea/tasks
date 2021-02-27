@@ -37,23 +37,61 @@
 (define (multPolinom p1 p2)
   (define (iter currEl resPol currP1)
     (cond
-      [(empty? currP1) resPol]
+      [(empty? currP1) (append resPol (list (foldl (λ (arg res) (+ (* arg currEl) res)) 0 p2)))]
       [else (iter (car currP1) (append resPol (list (foldl (λ (arg res) (+ (* arg currEl) res)) 0 p2))) (cdr currP1))]))
   (iter (car p1) '() (cdr p1)))
 
-; (multPolinom '(1 2 3) '(1 1 1)) ; result fun
+; (multPolinom '(1 1 1) '(1 1 1)) ; result fun
 
 
 ;; task4
 
-(define (sumNumNotation c num1 . numLst)
-  (define (iter currIndex currNum currList resultNum)
-    (cond
-      [(= currIndex 0) (+ resultNum currNum)]
-      [else (iter (- currIndex 1) (car currList) (cdr currList) (+ resultNum (* currNum (expt c currIndex))))]))
-  (iter (length numLst) num1 numLst 0))
+(define (ch->num ch)
+  (cond
+    [(equal? ch #\0) 0]
+    [(equal? ch #\1) 1]
+    [(equal? ch #\2) 2]
+    [(equal? ch #\3) 3]
+    [(equal? ch #\4) 4]
+    [(equal? ch #\5) 5]
+    [(equal? ch #\6) 6]
+    [(equal? ch #\7) 7]
+    [(equal? ch #\8) 8]
+    [else 9]))
 
-; (sumNumNotation 7 1) ; result fun
+(define (listDid num)
+  (cond
+    [(number? num) (foldl (λ (arg res) (append res (list(ch->num arg)))) '() (string->list(number->string num)))]
+    [else num]))
+
+(define (sumSystK didList1 didList2 k)
+  (define (iter currMod index resList)
+    (cond
+      [(and (eq? index -1) (> currMod 0)) (append (list currMod) resList)]
+      [(eq? index -1) resList]
+      [else (iter
+             (quotient (+ (list-ref didList1 index) (list-ref didList2 index) currMod) k)
+             (- index 1)
+             (append (list (remainder (+ (list-ref didList1 index) (list-ref didList2 index) currMod) k)) resList))]))
+  (iter 0 (- (length didList1) 1) '()))
+
+(define (getSumNumSysK num1 num2 k)
+  (define p1 (listDid num1))
+  (define p2 (listDid num2))
+  (cond
+    [(< (length p1) (length p2))
+     (sumSystK p2 (append (build-list (- (length p2) (length p1)) (lambda (x) 0)) p1) k)]
+    [(> (length p1) (length p2))
+     (sumSystK p1 (append (build-list (- (length p1) (length p2)) (lambda (x) 0)) p2) k)]
+    [else (sumSystK p1 p2 k)]))
+
+(getSumNumSysK 1011 111 2)
+
+
+(define (argsSum k arg1 . listArg)
+  (foldl (λ (arg res) (getSumNumSysK arg res k)) arg1 listArg))
+
+; (argsSum 2 1011 111 101) ; result fun
 
 
 ;; task5
