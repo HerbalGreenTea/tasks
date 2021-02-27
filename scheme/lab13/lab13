@@ -34,15 +34,35 @@
 ;; task3
 
 
-(define (multPolinom p1 p2)
-  (define (iter currEl resPol currP1)
-    (cond
-      [(empty? currP1) (append resPol (list (foldl (λ (arg res) (+ (* arg currEl) res)) 0 p2)))]
-      [else (iter (car currP1) (append resPol (list (foldl (λ (arg res) (+ (* arg currEl) res)) 0 p2))) (cdr currP1))]))
-  (iter (car p1) '() (cdr p1)))
+(define (getCoefList power listC)
+  (define powerList (build-list power (λ (x) (- power (+ x 1)))))
+  (map (lambda (coef degree) (cons coef degree)) listC powerList))
 
-; (multPolinom '(1 1 1) '(1 1 1)) ; result fun
+(define (multDeg d1 d2)
+  (define resC (* (car d1) (car d2)))
+  (define resD (+ (cdr d1) (cdr d2)))
+  (cons resC resD))
+  
+(define (multPolinims ListC1 ListC2)
+  (define (iter cofList result)
+    (define (iter2 degC degC2 result)
+      (if (empty? degC2)
+          result
+          (iter2 degC (cdr degC2)
+                      (cons (multDeg degC (car degC2)) result))))
+    (if (empty? cofList)
+        result
+        (let ([resultBuild (iter2 (car cofList) (getCoefList (length ListC2) ListC2) result)])
+          (iter (cdr cofList) resultBuild))))
+  (define (bring poly deg)
+    (define coef
+      (foldl (λ (el res) (+ (car el) res)) 0 (filter (λ (el) (= (cdr el) deg)) (iter (getCoefList (length ListC1) ListC1) '()))))
+    (if (= deg (- (+ (length ListC1) (length ListC2)) 2))
+        (cons coef poly)
+        (bring (cons coef poly) (+ deg 1))))
+  (bring '() 0))
 
+; (multPolinims '(1 2 3) '(4 5)) ; result fun
 
 ;; task4
 
@@ -85,9 +105,6 @@
      (sumSystK p1 (append (build-list (- (length p1) (length p2)) (lambda (x) 0)) p2) k)]
     [else (sumSystK p1 p2 k)]))
 
-(getSumNumSysK 1011 111 2)
-
-
 (define (argsSum k arg1 . listArg)
   (foldl (λ (arg res) (getSumNumSysK arg res k)) arg1 listArg))
 
@@ -110,11 +127,6 @@
       (methodNewtona (- x (/ (mthodHornera polynom x) (mthodHornera (p polynom) x))) polynom epsilon)))
 
 ; (methodNewtona 1 '(1 -1) 0.111) ; result fun
-
-
-
-
-
 
 
 
